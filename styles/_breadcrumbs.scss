@@ -1,0 +1,27 @@
+
+.breadcrumbs{
+    padding: 10px;
+}
+
+.breadcrumbs-item{
+    display: inline-block;
+}
+
+.breadcrumbs-item:not(:last-of-type)::after{
+    content: '\203a';
+    margin: 0 5px;
+    color: #cccccc;
+}
+
+.breadcrumbs-link{
+    color: #999999;
+}
+
+.breadcrumbs-link:hover{
+    text-decoration: underline;
+}
+
+.breadcrumbs-link-active{
+    color: #009578;
+    font-weight: 600;
+}

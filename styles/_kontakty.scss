@@ -1,0 +1,210 @@
+
+#kontakt{
+    background: var(--whiteBG);
+    padding: 20px 0;
+
+    .kontakt-nadpis{
+        grid-column: 1/9;
+        justify-self: center;
+        margin: 0 0 1% 0;
+        grid-row: 2;
+    }
+    .kontakt-logo{
+        grid-column: 1/9;
+        justify-self: center;
+        grid-row: 1;
+    }
+}        
+
+.karty{
+    grid-column: 1/9;
+    justify-self: center;
+    width: 80%;
+}
+
+.kontakt-form{
+    grid-column: 1/9;
+    background: var(--greenBG);
+    //background: rgba(43, 136, 71, 0.85);
+}
+
+.firma-kontakt, .majitel-kontakt{
+    //background: var(--greenBG);
+    box-sizing: border-box;;
+    border: 5px solid var(--greenBG);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    padding: 0 30px;
+    align-items: center;
+
+    h4{
+        //color: var(--whiteText);
+        color: var(--darkText);
+        margin: 15px 0;
+        text-align: start;
+        font-weight: 600;       //old 400
+    }
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+
+    div{
+        display: flex;
+        align-items: center;
+
+        img{
+            max-height: 100%;
+            max-width: 8%;
+            margin: 10px;
+        }
+
+        h4{
+            //color: var(--whiteText);
+            color: var(--darkText);
+            margin: 15px 0;
+            text-align: start;
+        }
+        a h4{
+            color: var(--darkButton)
+        }
+    }
+    .ic, .dic{
+        text-align: center;
+    }
+}
+
+.kontakt-form{
+    text-align: center;
+    margin: 20px;
+    border-radius: 20px;
+    width: 80%;
+    justify-self: center;
+
+    form{
+        display: flex;
+        flex-direction: column; 
+        padding: 0 20px;
+    
+        .button{
+            font-size: 16px;
+            padding: 20px;
+            border-radius: 30px;
+            width: 90%;
+            background: var(--whiteBG);
+            color: var(--darkText);
+            cursor: pointer;
+            border: 3px solid var(--darkButton);
+            transition: all 0.4s ease-in-out;
+
+            @include form-btn;
+        }
+        
+        input, textarea{
+            border: none;
+            border-radius: 20px;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        input{
+            height: 2vh;
+        }
+    }
+
+    h1{
+    padding: 20px 50px 0;
+    color: var(--whiteText);
+    }
+
+    h4{
+        padding: 0;
+        margin: 0;
+        color: var(--whiteText);
+    }
+}
+
+.mapa iframe{
+    grid-column: 1/9;
+    width: 85%;
+    justify-self: center;
+    border: 2px solid var(--greenBG);
+}
+
+@media screen and (min-width: 620px){
+
+    .kontakt-form, .karty{
+        width: 60%;
+    }
+
+}
+
+@media screen and (min-width: 960px){
+
+    #kontakt{
+        padding: 50px 50px;
+    }
+
+    .karty{
+        grid-column: 1/5;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 90%;
+        grid-row: 3;
+    }
+
+    .firma-kontakt, .majitel-kontakt{
+        padding: 30px 30px;
+    }
+
+    .kontakt-form{
+        grid-column: 5/9;
+        grid-row: 3;
+        width: 100%;
+    }
+
+}
+
+@media screen and (min-width: 1200px){
+
+    .mapa iframe{
+        height: 450px;
+    }
+
+    form input, textarea{
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 1500px){
+    #kontakt{
+        padding: 100px 150px;
+
+        .kontakt-nadpis{
+            font-size: 46px;
+        }
+        .kontakt-logo{
+            width: 8%;
+        }
+    }
+    
+    .kontakt-form{
+        width: 70%;
+    }
+
+    .karty{
+        width: 100%;
+    }
+
+    .firma-kontakt, .majitel-kontakt{
+        width: 70%;
+        justify-self: center;
+    }
+
+}

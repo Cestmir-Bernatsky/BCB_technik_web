@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description"
+        content="BCB technik s.r.o. Prodej a servis zemědělské techniky a prodej náhradních dílů pro zemědělskou mechanizaci." />
+    <meta name=”robots” content="index, follow">
+    <title>Kontakty | BCB technik</title>
+    <link rel="icon" href="./images/logo.png" type="image/icon type">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+
+</head>
+
+<body>
+
+    <!-- pop-up-on-success -->
+
+    <div id="pop-up" class="">
+        <h1>Váš dotaz byl úspěšně odeslán!</h1>
+        <a onclick="toggle()" class="button" href="kontakty.html">Rozumím!</a>
+    </div>
+
+    <!-- pop-up-on-success -->
+
+    <a href="#" class="goUpBtn" id="goUp">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    <nav class="site-nav grid">
+        <a href="index.html""><img src=" ./images/logo.png" alt="logo-BCB-technik"></a>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a class="link-underline" href="index.html">Domů</a></li>
+            <li><a class="link-underline" href="produkty.html">Produkty</a></li>
+            <li><a class="link-underline" href="sluzby.html">Služby</a></li>
+            <li><a class="link-underline" href="index.html#novinky">Aktuality</a></li>
+            <li><a class="link-underline is-active" href="kontakty.html">Kontakty</a></li>
+        </ul>
+
+    </nav>
+    <section id="kontakt" class="grid">
+        <h1 class="kontakt-nadpis">BCB technik s.r.o.</h1>
+        <img class="kontakt-logo" src="./images/logo.png" alt="BCB-logo">
+        <div class="karty">
+            <div class="firma-kontakt">
+                <div class="center">
+                    <div>
+                        <img src="./icons/newIcons/home-W.png" alt="poloha-ikona">
+                        <h4>Moravská Huzová 119, <br> 783 13 Štěpánov</h4>
+                    </div>
+                    <div>
+                        <img src="./icons/newIcons/kontakt-W.png" alt="kontakt-ikona">
+                        <a class="contacts" href="tel:+420 602 708 161" style="text-decoration: underline; text-decoration-color: var(--darkText);"><h4>+420 602 708 161</h4></a>
+                    </div>
+                    <div>
+                        <img src="./icons/newIcons/email-W.png" alt="email-ikona">
+                        <a class="contacts" href="mailto:bcbtechnik@bcbtechnik.cz" style="text-decoration: underline; text-decoration-color: var(--darkText);">
+                            <h4>bcbtechnik@bcbtechnik.cz</h4>
+                        </a>
+                    </div>
+                    <div>
+                        <img src="./icons/newIcons/clock-W.png" alt="pracovni-doba-ikona">
+                        <h4>Pondělí - Pátek: 7:00 - 16:00</h4>
+                    </div>
+                    <h4 class="ic">IČ: 46843781</h4>
+                    <h4 class="dic">DIČ: CZ46843781</h4>
+                </div>
+                
+            </div>
+            <div class="majitel-kontakt">
+                <div class="center">
+                    <div>
+                        <img src="./icons/newIcons/person-W.png" alt="vedouci-ikona">
+                        <h4>Ing. Čestmír Bernatský</h4>
+                    </div>
+                    <div>
+                        <img src="./icons/newIcons/kontakt-W.png" alt="kontakt-ikona">
+                        <a class="contacts" href="tel:+420 602 708 161" style="text-decoration: underline; text-decoration-color: var(--darkText);">
+                            <h4>+420 602 708 161</h4>
+                        </a>
+                    </div>
+                    <div>
+                        <img src="./icons/newIcons/email-W.png" alt="email-ikona">
+                        <a class="contacts" href="mailto:bernatsky@bcbtechnik.cz" style="text-decoration: underline; text-decoration-color: var(--darkText);">
+                            <h4>bernatsky@bcbtechnik.cz</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="kontakt-form">
+            <h1>Kontakní formulář</h1>
+            <form class="contact-form" action="contactForm.php" method="POST">
+                <h4>Jméno*</h4>
+                <input name="name" type="name" placeholder="Jméno" required>
+                <h4>E-mail*</h4>
+                <input name="email" type="email" placeholder="E-mail" required>
+                <h4>Telefon</h4>
+                <input name="number" type="tel" placeholder="Telefon">
+                <textarea name="message" placeholder="Vaše zpráva" cols="30" rows="10" required></textarea>
+                <button name="submit" type="submit" class="button">Odeslat zprávu!</button>
+            </form>
+        </div>
+    </section>
+    <section class="mapa grid">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2587.242443063796!2d17.275812415935874!3d49.57431555798357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47124dd991cadc21%3A0xad84ef17d9572a7d!2sBcb%20Technik%20S.r.o.!5e0!3m2!1sen!2scz!4v1619265616679!5m2!1sen!2scz" 
+            width="600" height="450" style="border:1;" allowfullscreen="" 
+            loading="lazy"></iframe>
+    </section>
+    <footer>
+        <div id="footer" class="grid">
+            <div class="kontaktni-info">
+                <h2>Kde nas najdete:</h2>
+                <h4>BCB technik s.r.o.</h4>
+                <h4>Moravská Huzová 119, <br> 783 13 Štěpánov</h4>
+                <div>
+                    <img src="./icons/kontakt.png" alt="kontakt-ikona">
+                    <a class="contacts" href="tel:+420 602 708 161"><h4>+420 602 708 161</h4></a>
+                </div>
+                <div>
+                    <img src="./icons/email.png" alt="email-ikona">
+                    <a class="contacts" href="mailto:bcbtechnik@bcbtechnik.cz"><h4>bcbtechnik@bcbtechnik.cz</h4></a>
+                </div>
+            </div>
+            <div class="rychle-odkazy">
+                <a href="index.html">Domů</a>
+                <a href="produkty.html">Produkty</a>
+                <a href="sluzby.html">Služby</a>
+                <a href="index.html#novinky">Aktuality</a>
+                <a href="#">Kontakty</a>
+            </div>
+            <a href="https://mapy.cz/s/darehesufu" target="_blank" class="poloha">
+                <img src="./icons/poloha.png" alt="poloha-ikona">
+                <h4>Kde nás najdete</h4>
+            </a>
+            <img src="./logos/spolehliva-firma6.png" alt="spolehliva-firma-certifikat" class="spolehliva">
+            <img src="./logos/katalog.png" alt="overena-firma-certifikat" class="overena">
+        </div>
+    </footer>
+    <section id="copyright" class="grid">
+        <h3>© 2021 BCB technik s.r.o. - všechna práva vyhrazena</h3>
+    </section>
+
+    <!-- scripts -->
+    <script src="./js/hamburger.js"></script>
+    <script src="./js/popUp.js"></script>
+    <!-- /scripts -->
+</body>
+
+</html>

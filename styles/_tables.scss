@@ -1,0 +1,17 @@
+
+table{
+    text-align: center;
+    margin-bottom: 5%;
+}
+table, td, th{
+    border: 1px solid var(--darkText);
+    border-collapse: collapse;
+}
+
+.model{
+    text-align: start;
+}
+
+.param{
+    padding-bottom: 2%;
+}

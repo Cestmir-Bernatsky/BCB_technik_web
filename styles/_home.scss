@@ -1,0 +1,315 @@
+
+/* fonts */
+
+.zamereni{
+    font-size: 1.5em;
+}
+
+#uvod{
+    padding: 0px 20px 20px 20px;
+    background-image: url('/images/uvod-krava.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.uvod-text{
+    text-align: center;
+    grid-column: 1/9;
+    
+    h1,p{
+        color: #FCF8F8;
+    }
+}
+.button{
+    font-size: 26px;
+    margin: 20px 0;
+    grid-column: 2/8;
+    text-align: center;
+}
+
+#spoluprace{
+    background: #FFFFFF;
+    text-align: center;
+
+}
+
+.firmy{
+    grid-column: 1/9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    img{
+        margin: 0 1%;
+        max-width: 15%;
+    }
+}
+
+#nase-produkty{
+    background: var(--greenBG);
+    padding-bottom: 100px;
+    padding: 20px 20px 20px 20px;
+
+    h1{
+        margin: 0;
+        padding: 20px;
+        font-size: 32px;
+        text-align: center;
+        color: var(--whiteText);
+    }
+}
+
+.produkty a{
+    margin: 10px 0;
+    background: var(--whiteBG);
+    border: 5px solid var(--whiteBG);
+    border-radius: 15px;
+    max-width: 50%;
+    grid-column: 1/9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    text-align: center;
+    vertical-align: text-bottom;
+
+    @include hover-nejProdukty;
+
+    box-shadow:  10px 10px 25px #505050;
+}
+
+.produkty a *{
+    margin: 0 20px;
+    max-width: 100%;
+    min-height: 50px;
+    border-radius: 15px;
+}
+
+.produkty img{
+    margin: 0 0 20px 0;
+}
+
+#novinky{
+    background: var(--whiteBG);
+    padding-bottom: 50px;
+
+    h1{
+        margin: 0;
+        padding: 20px;
+        font-size: 32px;
+        text-align: center;
+        color: var(--darkText);
+    }
+}
+
+.aktuality div{
+    grid-column: 1/9;
+    text-align: center;
+    background: var(--greenBG);
+    width: 60%;
+    justify-self: center;
+    align-self: flex-end;
+    margin-bottom: 20px;
+    border: 3px solid var(--greenBG);
+    border-radius: 15px;
+
+    h2{
+        color: var(--whiteText);
+    }
+
+    h3{
+        background: var(--whiteBG);
+        margin-bottom: 0;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+    }
+
+    h2, h3{
+        padding: 10px 20px;
+    }
+}
+
+#o-nas{
+    background: var(--greenBG);
+
+    .onas-container{
+        .o-nas-text a{
+            display: flex;
+            justify-content: center;
+            margin: 10% 0;
+        }
+    
+        img{
+            grid-column: 1/9;
+            object-fit: cover;
+            width: 100%;
+            max-height: 45vh;
+        }
+    } 
+}
+
+.o-nas-text{
+    grid-column: 1/9;
+    text-align: center;
+    padding: 0 20px;
+
+    h1, p{
+        color: var(--whiteText);
+    }
+
+    h1{
+        text-transform: uppercase;
+    }
+}
+
+
+/* small tablet styles */
+@media screen and (min-width: 640px){
+
+        .o-nas-text{
+            padding: 100px 50px 0 50px;
+        }
+
+        .produkty a{
+            max-width: 70%;
+            grid-column: span 4;
+        }
+}
+
+
+/* latop styles */
+@media screen and (min-width: 960px){
+    
+    body{
+        font-size: 18px;
+    }
+
+    #uvod{
+        padding: 20px 50px 40px 50px;
+    }
+    
+    .uvod-text{
+        grid-column: 1/9;
+    }
+
+    .produkty-btn{
+        grid-column: 2/5;
+    }
+
+    .onas-btn{
+        grid-column: 5/8;
+    }
+
+    #nase-produkty{
+        padding: 20px 50px 20px 50px;
+    }
+
+    .produkty a{
+        max-width: 70%;
+        grid-column: span 4;
+    }
+
+    .aktuality{
+        padding: 20px 50px 20px 50px;
+    }
+
+    .aktuality div{
+        grid-column: span 4;
+        width: 90%;
+    }
+    
+    #o-nas {
+        
+        .onas-container{
+
+            .o-nas-text a{
+                margin: 10%;
+            }
+        
+        img{
+            grid-column: 1/5;
+            grid-row: 1;
+            align-self: center;
+            max-height: 65vh;
+        }
+    }
+}
+
+    .o-nas-text{
+        grid-column: 5/9;
+        align-self: center;
+        padding: 10px 50px;
+    }
+
+    .kontaktni-info{
+        grid-column: 1/3;
+    }
+
+    .rychle-odkazy{
+        grid-column: 3/4;
+    }
+
+    .poloha{
+        grid-column: 8/9;
+    }
+
+    .overena{
+        grid-column: 4/6;
+        grid-row: 1;
+    }
+
+    .spolehliva{
+        grid-column: 6/8;
+        grid-row: 1;
+    }
+}
+
+/* desktop styles */
+@media screen and (min-width: 1200px){
+
+    body{
+        font-size: 22px;
+    }
+
+    #uvod{
+        padding: 200px 100px;
+    }
+
+    .uvod-text{
+        text-align: start;
+        grid-column: 1/5;
+        margin-bottom: 50px;
+    }
+
+    .produkty-btn{
+        grid-column: 1/3;
+    }
+
+    .onas-btn{
+        grid-column: 3/5;
+        margin: 20px 20px;
+    }
+
+    .firmy{
+        max-width: 100%;
+        padding: 0 100px 0 100px;
+    }
+
+    #nase-produkty{
+        padding: 20px 100px 120px 100px;
+    }
+
+    .produkty a{
+        grid-column: span 2;
+    }
+
+    #novinky{
+        padding: 20px 100px 20px 100px;
+    }
+
+    .o-nas-text{
+        padding-right: 100px;
+        text-align: end;
+    }
+}

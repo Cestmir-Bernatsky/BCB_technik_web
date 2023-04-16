@@ -1,0 +1,183 @@
+#footer{
+    background: var(--whiteText);
+    padding: 20px 50px 20px 50px;
+}
+
+.kontaktni-info{
+    grid-column: 1/9;
+    text-align: center;  
+    justify-self: center; 
+
+    h2{
+        text-transform: uppercase;
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    h4{
+        font-size: 16px;
+    }
+
+    div{
+        margin-bottom: 25px;
+        height: 10%;
+        width: 100%;
+
+        img{
+            width: 12%;
+            height: 70%;
+        }
+
+        h4{
+            margin: 0 10px 20px 10px;
+        }
+    }
+}
+
+.rychle-odkazy{
+    grid-column: 1/5;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    padding-bottom: 20px;
+
+    a{
+        font-weight: 700;
+    }
+}
+
+.poloha{
+    grid-column: 5/9;
+    text-align: center;
+    align-self: center;
+}
+
+.overena{
+    grid-column: 1/5; 
+}
+
+.spolehliva{
+    grid-column: 5/9;
+}
+
+.overena, .spolehliva{
+    grid-row: 3;
+    max-width: 50%;
+    align-self: center;
+    justify-self: center;
+}
+
+#copyright{
+    background: var(--greenBG);
+    
+
+    h3{
+        grid-column: 1/9;
+        color: var(--whiteText);
+        text-align: center;
+        font-weight: 300;
+    }
+    
+}
+
+.contacts{
+    h4{
+        color: #0645AD;
+    }
+
+    h4:hover{
+        opacity: 80%;
+        transform: scale(1.01);
+    }
+}
+
+
+@media screen and (min-width: 620px){
+
+    #footer{
+        padding-top: 50px;
+    }
+    .kontaktni-info{
+        grid-column: 1/4;
+        align-self: center;
+        text-align: start;
+
+        :nth-child(4){
+            margin: 20px 0px;
+        }
+
+        div{
+            display: flex;
+            margin-bottom: 0;
+
+            img{
+                margin-right: 10px;
+                width: 8%;
+            }
+
+            h4{
+                padding: 0;
+                margin: 0;
+            }
+        }
+
+        h2, h4{
+            margin: 0;
+        }
+    }
+
+    .rychle-odkazy{
+        grid-column: 5/6;
+        align-self: center;
+    }
+
+    .poloha{
+        grid-column: 7/9;
+    }
+
+    .overena{
+        grid-column: 3/5;
+        grid-row: 2;
+    }
+
+    .spolehliva{
+        grid-column: 5/7;
+        grid-row: 2;
+    }
+
+}
+
+@media screen and (min-width: 960px){
+
+    .kontaktni-info{
+        grid-column: 1/3;
+    }
+
+    .rychle-odkazy{
+        grid-column: 3/4;
+    }
+
+    .poloha{
+        grid-column: 8/9;
+    }
+
+    .overena{
+        grid-column: 4/6;
+        grid-row: 1;
+    }
+
+    .spolehliva{
+        grid-column: 6/8;
+        grid-row: 1;
+    }
+}
+
+@media screen and (min-width: 1200px){
+
+    .rychle-odkazy a{
+        font-weight: 400;
+    }
+    .rychle-odkazy a:nth-child(1){
+        font-weight: bolder;
+    }
+}

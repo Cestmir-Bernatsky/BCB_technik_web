@@ -1,0 +1,115 @@
+@import 'variables';
+@import 'mixins';
+@import 'buttons';
+@import 'nav';
+@import 'footer';
+@import 'home';
+@import 'sluzby';
+@import 'kontakty';
+@import 'pastva';
+@import 'rolovaci';
+@import '3btns';
+@import 'gallery';
+@import 'tables';
+@import 'rozcestnik';
+@import 'breadcrumbs';
+@import 'swup';
+@import 'popUp';
+
+
+html{
+    scroll-behavior: smooth;
+    zoom: 0.8;
+}
+
+.goUpBtn{
+    background: var(--whiteText);
+    opacity: 90%;
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    bottom: 40px;
+    right: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: var(--darkText);
+    box-shadow: 1px 1px 3px #4b4b4b,
+                -1px -1px 1px #ffffff;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+
+/* reset */
+body, p, a, ul, li{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+/* base style */
+
+body{
+    background: var(--whiteBG);
+    overflow-x: hidden;
+    font-family: 'Lato', sans-serif;
+}
+
+.button{
+    background: var(--whiteBG);
+    border: 2px solid var(--greenBG);
+    color: var(--darkText);
+    padding: 20px 12px;
+    border-radius: 60px;
+    display: inline-block;
+    font-weight: bold;
+    align-self: center;
+}
+
+/* fonts */
+
+h1, h2, h3, h4{
+    color: var(--darkText);
+    font-weight: bold;
+}
+
+p, a, li{
+    color: var(--darkText);
+}
+
+h1{
+    font-size: 1.5em;
+}
+
+h2{
+    font-size: 1.3em;
+}
+
+h3{
+    font-size: 1.1em;
+}
+
+p{
+    font-size: 1em;
+}
+
+footer .rychle-odkazy a:hover{
+    opacity: 80%;
+}
+
+
+@media screen and (min-width: 960px){
+    .goUpBtn{
+        height: 60px;
+        width: 60px;
+        line-height: 60px;
+    }
+}

@@ -1,0 +1,101 @@
+.site-nav{
+    background: var(--greenBG);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    border-bottom: 3px solid var(--whiteBG);
+
+    ul{
+        display: none; 
+    }
+
+    .line{
+        width: 30px;
+        height: 3px;
+        background: var(--whiteBG);
+        margin: 5px;
+    }
+
+    .hamburger{
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+    }
+
+    .nav-links{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        background: #2B8847;
+        height: 125vh;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        clip-path: circle(100px at 90% -20%);
+        transition: all 0.8s ease-out;
+        pointer-events: none;
+
+        .link-underline::after{
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: var(--whiteBG);
+            transition: width 0.3s;
+        }
+
+        .link-underline:hover::after{
+            width: 100%;
+            transition: width 0.3s;
+        }
+
+        .link-underline:is(.is-active)::after{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: var(--whiteBG);
+
+            
+        }
+    }
+
+    .nav-links.open{
+        clip-path: circle(2300px at 90% -10%);
+        pointer-events: all;
+    }
+
+    a{
+        color: var(--whiteText);
+
+        @include link  
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .site-nav{
+        padding: 0 100px 0 100px; 
+
+        .nav-links{
+            grid-column: 3/7;
+            flex-direction: row;
+            justify-content: space-between;
+            position: absolute;
+            height: 100%;
+            clip-path: none;
+            transition: none;
+            pointer-events: all;
+        }
+
+        .hamburger{
+            display: none;
+        }
+
+        li{
+            color: var(--whiteText);
+        }
+    }
+}

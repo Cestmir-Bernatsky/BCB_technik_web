@@ -1,0 +1,66 @@
+@mixin uvod-btn {
+
+    &:hover{
+        background: rgba(43, 136, 71, 0.6);
+        color: var(--whiteText);
+        transition: all 0.2s ease-in;
+    }
+}
+
+@mixin kontakt-btn {
+
+    &:hover{
+        background: var(--whiteBG);
+        color: var(--darkText);
+        transition: all 0.4s ease-in-out;
+    }
+}
+
+@mixin rolovaci-sekce {
+    &:hover{
+        opacity: 90%;
+    }
+}
+
+@mixin link {
+    &:hover{
+        color: var(--darkText);
+    }
+
+    &:is(.is-active){
+        color: var(--darkText);
+    }
+}
+
+@mixin hover-rozcestnik {
+    &:hover{
+        opacity: 80%;
+
+        img{
+            transform: scale(1.05);
+        }
+    }
+}
+
+@mixin hover-nejProdukty {
+    &:hover{
+        opacity: 80%;
+        transform: scale(1.05);
+    }
+}
+
+@mixin form-btn {
+    &:hover{
+        opacity: 90%;
+        border: 3px solid var(--whiteBG);
+        background: var(--darkButton);
+        color: var(--whiteText);
+        transition: all 0.4s ease-in-out;
+    }
+}
+
+@mixin blur{
+    section:only-of-type{
+        filter: blur(10px);
+    }  
+}

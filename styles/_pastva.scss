@@ -1,0 +1,281 @@
+
+#predstaveni, #produkt-sekce, #produkt-sekce-rolovaci, .zaver{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+#predstaveni{
+    padding: 5% 10%;  
+    text-align: center;
+
+
+    .button{
+        grid-column: 1/9;
+        font-size: 16px;
+    }
+
+}
+.uvodni-slovo{
+    grid-column: 1/9;
+
+    h1{
+        font-weight: 700;
+    }
+
+    h3{
+        font-weight: 400;
+    }
+
+    h4{
+        font-weight: 400;
+    }
+}
+
+#produkt-sekce{
+
+    .foto-produktu{
+        grid-column: 1/9;
+        position: relative;
+        z-index: -1;   
+
+        img{
+            width: 100%;
+            object-fit: cover;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            box-shadow:  6px 6px 15px #858484;
+        }
+        .nadpis-produktu{
+            background: var(--greenBG);
+            color: var(--whiteText);
+            padding: 5%;
+            //padding: 50px;
+            max-width: 50%;
+            border-radius: 20px;
+            position: absolute;
+            bottom: -20%;
+            left: 8%;
+            font-size: 14px;
+            font-weight: bold;
+
+            ///////////////
+            background: linear-gradient(145deg, #2e924c, #277a40);
+            // box-shadow:  4px 4px 6px #858484;
+            box-shadow:  4px 4px 6px #505050;
+        }
+    }
+}
+
+
+    
+.o-produktu{
+    grid-column: 1/9;
+    margin-top: 15%;
+    margin-bottom: 8%;
+    padding: 0 20px;
+    justify-items: center;
+    align-items: center;
+    gap: 20px;
+
+    iframe{
+        grid-column: 1/9;
+        width: 100%;
+        margin-top: 10%;
+    }
+
+    img{
+        grid-column: 2/8;
+        max-width: 70%;
+    }
+
+    h4{
+        padding: 0 20px;
+        font-weight: 600;
+        text-align: center;
+        grid-column: 1/9;
+        margin: 0 0 5% 0;
+    }
+
+    p{
+        padding: 0 20px;
+        font-weight: 400;
+        text-align: center;
+        grid-column: 1/9;
+        margin: 0 0 5% 0;
+    }
+    
+    h1{
+        text-align: center;
+        grid-column: 1/9;
+    }
+
+    #dlouha{
+        grid-column: 1/9;
+        height: 100%;
+    }
+
+    .odrazka{
+        grid-column: 1/9;
+        display: flex;
+        align-items: center;
+        background: var(--greenBG);
+        border-radius: 60px;
+        width: 90%;
+        padding: 5px 5px;
+    
+        .point{
+            background: var(--whiteBG);
+            border-radius: 50%;
+            margin-left: 10px;
+            padding: 10px;
+        }
+        h4{
+            color: var(--whiteText);
+            padding: 20px 10px;
+            margin: 0;
+            text-align: start;
+            font-weight: 400;
+        }
+    }
+}
+
+.podsekce{
+    margin: 0;
+}
+
+.zaver{
+    background: var(--greenBG);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    //box-shadow: 6px 0 15px -2px #505050;
+
+    p{
+        color: var(--whiteText);
+        grid-column: 1/9;
+        text-align: center;
+        padding: 40px;
+    }
+}
+
+@media screen and (min-width: 620px){
+    
+    body{
+        font-size: 20px;
+    }
+
+    #produkt-sekce .foto-produktu .nadpis-produktu{
+        bottom: -20%;
+    }
+    
+    #predstaveni{
+
+
+        .btn1, .btn2, .btn3{
+            grid-column: 2/8;
+        }
+    }
+
+    .o-produktu
+    {
+        iframe{
+            grid-column: 2/8;
+            height: 220px;
+        }
+
+        .odrazka{
+            height: 6vh;
+        }
+    }
+}
+
+@media screen and (min-width: 960px){
+
+    #predstaveni{
+
+        padding: 30px 50px;
+
+        .button{
+            font-size: 20px;
+        }
+        
+        .btn1{
+            grid-column: 2/5
+        }
+
+        .btn2{
+            grid-column: 5/8;
+            margin-left: 20px;
+        }
+    }
+
+    .o-produktu{
+
+        iframe{
+            height: 320px;
+        }
+        
+        .odrazka{
+            grid-column: span 4;
+        }
+    }
+
+    #produkt-sekce{
+        .foto-produktu{
+            img{
+                height: 25vh;
+            }
+        }
+    }  
+
+}
+
+@media screen and (min-width: 1200px){
+
+    #produkt-sekce .foto-produktu{
+        img{
+            height: 25vh;
+        }
+
+        .nadpis-produktu{
+            font-size: 22px;
+            bottom: -40%;
+        }
+    }
+
+    .o-produktu{
+
+    iframe{
+        height: 400px;
+    }
+    
+        #dlouha{
+            width: 60%;
+        }
+    }
+} 
+
+@media screen and (min-width: 1800px){
+    #predstaveni, #produkt-sekce, #produkt-sekce-rolovaci, .vyhody, .zaver{
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    #produkt-sekce .foto-produktu{
+        .nadpis-produktu{
+            bottom: -45%;
+        }
+    }
+
+    .vyhody, .zaver{
+        padding: 75px 0;
+
+        p{
+            grid-column: 2/8;
+            text-align: start;
+        }
+    }
+
+
+    
+}
